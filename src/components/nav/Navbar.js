@@ -8,16 +8,18 @@ const Navbar = () => {
 
   const logout = () => {
     window.localStorage.removeItem('user_id')
-    window.localStorage.removeItem('session_id')
-    navigate('/')
+    window.localStorage.removeItem('session_key')
+    navigate("/")
   }
 
   if (window.localStorage.getItem('user_id')) {
     return (
       <nav className="navbar">
-        <h1>Chitter</h1>
+        <Link to="/" style={{textDecoration: "none"}}>
+          <h1>Chitter</h1>
+        </Link>
         <div className="links">
-          <Link to="/">Home</Link>
+          <Link to="/account">My Account</Link>
           <button onClick={logout}>Log out</button>
         </div>
       </nav>
@@ -25,10 +27,10 @@ const Navbar = () => {
   } else {
     return (
       <nav className="navbar">
-        <h1>Chitter</h1>
+        <Link to="/" style={{textDecoration: "none"}}>
+          <h1>Chitter</h1>
+        </Link>
         <div className="links">
-          <Link to="/">Home</Link>
-
           <Login />
           <Link to="/signup">
             <button>Sign up</button>

@@ -15,3 +15,8 @@
 .peep a{
   text-decoration: none;
 }
+
+.title {
+  zoom: 2;
+  margin-top: 10px;
+}

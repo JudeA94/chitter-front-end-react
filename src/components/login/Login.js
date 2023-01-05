@@ -1,13 +1,11 @@
 import './login.css'
-import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 const Login = () => {
   const [handle, setHandle] = useState('')
   const [password, setPassword] = useState('')
-  const user = { handle: handle, password: password }
+  const user = { handle, password: password }
 
-  const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -45,7 +43,7 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="login">
-        <label>Handle : </label>
+        <label></label>
         <input
           type="text"
           placeholder="Enter Username"
@@ -54,7 +52,7 @@ const Login = () => {
           value={handle}
           onChange={handleHandleChange}
         ></input>
-        <label>Password : </label>
+        <label></label>
         <input
           type="password"
           placeholder="Enter Password"

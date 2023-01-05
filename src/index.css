@@ -12,3 +12,26 @@
   margin: 40px auto;
   padding: 20px;
 }
+
+.peep-input {
+  padding: 10px 16px;
+  zoom: 2;
+}
+
+.peep-input h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.peep-input a{
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.peep-btn {
+  margin-left: 10px;
+}

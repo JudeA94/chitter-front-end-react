@@ -26,10 +26,11 @@ const Signup = () => {
     console.log(user)
     fetch('https://chitter-backend-api-v2.herokuapp.com/users', {
       method: 'POST',
-      headers: { "Content-Type": "application/json"},
-      body: JSON.stringify({"session": {"handle":handle, "password":password}})
+      headers: { "Content-Type":"application/json"},
+      body: JSON.stringify({"user": {"handle":handle, "password":password}})
     }).then((response) => {
       if(response.status === 201) {
+        alert("You can now log in")
         navigate('/')
       } else {
         navigate('/signup')
