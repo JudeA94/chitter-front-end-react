@@ -3,6 +3,7 @@ import NotFound from './NotFound';
 import Navbar from './components/nav/Navbar';
 import Signup from './components/signup/Signup';
 import Peep from './components/peep/Peep';
+import AccountPage from './components/accountPage/accountPage';
 
 import { Routes, Route } from "react-router-dom";
 
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/peeps/:id" element={<Peep />} />
+        <Route path="/account" element={<AccountPage />} />
       </Routes>
       </div>
     </div>

@@ -27,6 +27,7 @@ const Login = () => {
       let data = await response.json()
       window.localStorage.setItem('session_key', data.session_key)
       window.localStorage.setItem('user_id', data.user_id)
+      window.localStorage.setItem('handle', handle)
       window.location.reload()
     }
   }
