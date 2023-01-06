@@ -52,6 +52,7 @@ const Login = () => {
           required
           value={handle}
           onChange={handleHandleChange}
+          id="handle"
         ></input>
         <label></label>
         <input
@@ -61,8 +62,9 @@ const Login = () => {
           required
           value={password}
           onChange={handlePasswordChange}
+          id="password"
         ></input>
-        <button type="submit">Login</button>
+        <button type="submit" id="login-btn">Login</button>
       </div>
     </form>
   )
