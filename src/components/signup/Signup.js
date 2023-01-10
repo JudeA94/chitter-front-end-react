@@ -49,11 +49,11 @@ const Signup = () => {
       <h2>Create an account</h2>
       <form onSubmit={handleSubmit}>
         <label>Handle:</label>
-        <input type="text" required value={handle} onChange={handleHandleChange}></input>
+        <input type="text" id="signup-handle" required value={handle} onChange={handleHandleChange}></input>
         <label>Password:</label>
-        <input type="password" required value={password} onChange={handlePasswordChange}></input>
-        {!isPending && <button>Sign up</button>}
-        {isPending && <button disabled>Signing up...</button>}
+        <input type="password" id="signup-password" required value={password} onChange={handlePasswordChange}></input>
+        {!isPending && <button id="signup-btn">Sign up</button>}
+        {isPending && <button id="signup-btn" disabled>Signing up...</button>}
       </form>
     </div>
    );

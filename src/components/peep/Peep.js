@@ -30,7 +30,7 @@ const Peep = () => {
           )}`,
         },
       },
-    ).then(() => window.location.reload())
+    ).then(() => navigate('/'))
   }
 
   const handleLike = (e) => {
@@ -49,7 +49,7 @@ const Peep = () => {
           )}`,
         },
       },
-    ).then(() => window.location.reload());
+    );
   }
 
   return (
@@ -61,8 +61,8 @@ const Peep = () => {
           <h2>{peep.body}</h2>
           <p>Written by: {peep.user.handle}</p>
           <p>Likes: {peep.likes.length}</p>
-          {window.localStorage.getItem('user_id') && (
-            <button onClick={handleLike}>Like</button>
+          {window.localStorage.getItem('user_id') != peep.user.id && window.localStorage.getItem('user_id') && (
+            <button onClick={handleLike}>{hasBeenLiked() ? 'Unlike' : 'Like'}</button>
           )}
           <p>Posted {howLongAgo(peep)} ago</p>
           {window.localStorage.getItem('user_id') == peep.user.id && (
